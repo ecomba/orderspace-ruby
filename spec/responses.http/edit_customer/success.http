@@ -1,0 +1,19 @@
+HTTP/1.1 200 OK
+Server: nginx/1.18.0 (Ubuntu)
+Date: Mon, 05 Dec 2022 21:01:15 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 583
+Connection: keep-alive
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+ETag: W/"74cc9fbfdde7a4e0e52a4b176ffa4365"
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: ec6b5456-b055-4560-8262-67cda24c0c33
+X-Runtime: 0.035711
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+{"customer":{"id":"cu_03dywzg3","company_name":"COMP","created":"2022-12-05T07:46:52Z","status":"active","reference":"","buyers":[{"name":"Peter","email_address":"peter@piper.com"}],"phone":"","email_addresses":{"orders":"peter@piper.com","dispatches":"peter@piper.com","invoices":"peter@piper.com"},"tax_number":"","tax_rate_id":null,"addresses":[{"company_name":"The Company","contact_name":"Peter","line1":"The address","line2":"","city":"","state":"","postal_code":"W1","country":"GB"}],"minimum_spend":null,"payment_terms_id":null,"customer_group_id":null,"price_list_id":null}}

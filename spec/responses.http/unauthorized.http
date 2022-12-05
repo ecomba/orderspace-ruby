@@ -1,0 +1,18 @@
+HTTP/1.1 401 Unauthorized
+Server: nginx/1.18.0 (Ubuntu)
+Date: Fri, 02 Dec 2022 16:12:32 GMT
+Content-Type: text/html
+Content-Length: 0
+Connection: keep-alive
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+Cache-Control: private, no-store
+Pragma: no-cache
+WWW-Authenticate: Bearer realm="Orderspace", error="invalid_token", error_description="The access token is invalid"
+X-Request-Id: e571927a-063f-4b42-a74a-7e450fa13296
+X-Runtime: 0.009145
+Strict-Transport-Security: max-age=31536000; includeSubDomains

@@ -1,0 +1,20 @@
+HTTP/1.1 200 OK
+Server: nginx/1.18.0 (Ubuntu)
+Date: Thu, 01 Dec 2022 16:05:08 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 123
+Connection: keep-alive
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+Cache-Control: private, no-store
+Pragma: no-cache
+ETag: W/"d0a4f3cfc0e4276ee22d66f3e8e22257"
+X-Request-Id: e0eb5b87-6cf4-4afb-b477-864d5cae9949
+X-Runtime: 0.026679
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+{"access_token":"wo983iaiaska092ao9y838","token_type":"Bearer","expires_in":1800,"scope":"read write"}

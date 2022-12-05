@@ -1,0 +1,19 @@
+HTTP/1.1 200 OK
+Server: nginx/1.18.0 (Ubuntu)
+Date: Fri, 02 Dec 2022 16:13:52 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 661
+Connection: keep-alive
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+ETag: W/"a769a42e85d1f6e87df9eba80112da29"
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: 039766f0-9ab3-41d6-80eb-769f880bf395
+X-Runtime: 0.052137
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+{"customer":{"id":"cu_03dy67p3","company_name":"Blue Sky","created":"2022-12-02T16:13:52Z","status":"active","reference":"","buyers":[{"name":"Emilia Jane Dogherty","email_address":"sample@orderspace.com"}],"phone":"12345","email_addresses":{"orders":"sample@orderspace.com","dispatches":"sample@orderspace.com","invoices":"sample@orderspace.com"},"tax_number":"","tax_rate_id":null,"addresses":[{"company_name":"Blue Sky","contact_name":"Emilia Jane Dogherty","line1":"12 Blue Sky Lane","line2":"","city":"Bristol","state":"","postal_code":"BS1 2DF","country":"GB"}],"minimum_spend":150.0,"payment_terms_id":null,"customer_group_id":null,"price_list_id":null}}
