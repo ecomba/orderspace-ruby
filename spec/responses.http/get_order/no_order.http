@@ -1,0 +1,18 @@
+HTTP/1.1 404 Not Found
+Server: nginx/1.18.0 (Ubuntu)
+Date: Tue, 06 Dec 2022 15:27:44 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 44
+Connection: keep-alive
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+Cache-Control: no-cache
+X-Request-Id: 6545d97d-d7d0-4741-b39e-c8773d7b69c0
+X-Runtime: 0.010699
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+{"message":"Couldn't find order with id 42"}

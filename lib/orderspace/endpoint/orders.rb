@@ -9,6 +9,12 @@ module Orderspace
         response = client.get('orders', options)
         Orderspace::Structs.from(JSON.parse(response.body), OrderList)
       end
+
+      def get_order(order_id)
+        response = client.get("orders/#{order_id}")
+
+        Orderspace::Structs.from(JSON.parse(response.body)['order'], Order)
+      end
     end
   end
 end
