@@ -37,12 +37,20 @@ module Orderspace
       CustomersEndpoint.new(self)
     end
 
+    def orders
+      OrdersEndpoint.new(self)
+    end
+
     class OauthEndpoint < Orderspace::Endpoint
       include Orderspace::Endpoint::Oauth
     end
 
     class CustomersEndpoint < Orderspace::Endpoint
       include Orderspace::Endpoint::Customers
+    end
+
+    class OrdersEndpoint < Orderspace::Endpoint
+      include Orderspace::Endpoint::Orders
     end
 
     def get(path, options = {})

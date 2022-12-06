@@ -8,5 +8,6 @@ module Orderspace
                        :currency, :net_total, :gross_total)
     OrderLine = Struct.new(:id, :sku, :name, :options, :grouping_category, :shipping, :quantity, :unit_price,
                            :sub_total, :tax_name, :tax_rate, :tax_amount, :on_hold, :invoiced, :paid, :dispatched)
+    OrderList = Struct.new(:orders, :has_more)
   end
 end

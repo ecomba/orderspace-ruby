@@ -29,7 +29,7 @@ module Orderspace
     private
 
     def self.address?(key)
-      key.eql? 'shipping_address' || 'billing_address'
+      key.eql?('shipping_address') || key.eql?('billing_address')
     end
 
     def self.hash_dump(struct)
