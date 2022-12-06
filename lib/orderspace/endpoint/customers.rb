@@ -5,7 +5,7 @@ module Orderspace
     module Customers
       include Orderspace::Structs
       def create_customer(customer)
-        response = client.post('customers', { customer: Orderspace::Structs.to_json(customer) })
+        response = client.post('customers', { customer: Orderspace::Structs.hashify(customer) })
         Orderspace::Structs.from(JSON.parse(response.body)['customer'], Customer)
       end
 
@@ -22,7 +22,7 @@ module Orderspace
       end
 
       def edit_customer(customer)
-        response = client.put("customers/#{customer.id}", { customer: Orderspace::Structs.to_json(customer) })
+        response = client.put("customers/#{customer.id}", { customer: Orderspace::Structs.hashify(customer) })
 
         Orderspace::Structs.from(JSON.parse(response.body)['customer'], Customer)
       end

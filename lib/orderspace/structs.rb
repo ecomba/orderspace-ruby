@@ -8,6 +8,8 @@ module Orderspace
           method_name = "#{key}="
           if value.is_a? Array
             build_structs(key, method_name, new_object, value)
+          elsif address?(key)
+            new_object.send(method_name.to_sym, Orderspace::Structs.from(value, Orderspace::Structs::Address))
           elsif new_object.respond_to? method_name
             new_object.send(method_name.to_sym, value)
           end
@@ -15,8 +17,8 @@ module Orderspace
       end
     end
 
-    def self.to_json(struct)
-      json_dump(struct)
+    def self.hashify(struct)
+      hash_dump(struct)
     end
 
     def self.validate(struct)
@@ -26,7 +28,11 @@ module Orderspace
 
     private
 
-    def self.json_dump(struct)
+    def self.address?(key)
+      key.eql? 'shipping_address' || 'billing_address'
+    end
+
+    def self.hash_dump(struct)
       hash = {}
 
       struct.members.collect do |member|
@@ -46,7 +52,9 @@ module Orderspace
     end
 
     def self.infer_class(key)
-      if key.end_with?('es')
+      if key.include? '_'
+        clazz = key.chomp('s').split('_').map{|e| e.capitalize}.join
+      elsif key.end_with?('es')
         clazz = key.capitalize.chomp('es')
       elsif key.end_with?('s')
         clazz = key.capitalize.chomp('s')
@@ -56,7 +64,7 @@ module Orderspace
 
     def self.extract_value_from(struct, member)
       if struct.send(member.to_sym).is_a? Array
-        struct.send(member.to_sym).map { |member| json_dump(member) }
+        struct.send(member.to_sym).map { |member| hash_dump(member) }
       else
         struct.send(member.to_sym)
       end
@@ -68,3 +76,4 @@ require_relative 'struct/address'
 require_relative 'struct/buyer'
 require_relative 'struct/customer'
 require_relative 'struct/oauth_credentials'
+require_relative 'struct/order'

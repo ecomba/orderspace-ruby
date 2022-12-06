@@ -25,9 +25,9 @@ describe Orderspace::Structs::Customer do
       end
     end
 
-    it 'is json' do
-      json = Orderspace::Structs.to_json(@customer)
-      expect(json).to be_a Hash
+    it 'is a hash' do
+      hash = Orderspace::Structs.hashify(@customer)
+      expect(hash).to be_a Hash
     end
   end
 

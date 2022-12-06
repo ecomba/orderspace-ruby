@@ -84,9 +84,7 @@ module Orderspace
     def request(method, uri, data = nil, options = {})
       request_options = add_custom_request_options(options)
 
-      if @access_token
-        request_options[:headers]['Authorization'] = "Bearer #{@access_token}"
-      end
+      request_options[:headers]['Authorization'] = "Bearer #{@access_token}" if @access_token
 
       if data
         request_options[:headers]['Content-Type'] = 'application/json'
