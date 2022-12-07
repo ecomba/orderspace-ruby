@@ -1,8 +1,8 @@
 # Bean Mind Orderspace Ruby Client
 
-A Ruby client to connect and use the Orderspace API.
+A Ruby client to connect and use the Orderspace API (https://apidocs.orderspace.com/).
 
-Bear with us as we are working on this (and updating/writing the documentation)
+![Orderspace Logo](orderspace-logo.png)
 
 ## Installation
 
@@ -35,3 +35,10 @@ The gem is available as open source under the terms of the [MIT License](https:/
 ## Code of Conduct
 
 Everyone interacting in the Orderspace::Ruby project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/bean-mind/orderspace-ruby/blob/main/CODE_OF_CONDUCT.md).
+
+## Bean Mind
+
+This gem was created by [Bean Mind](https://beanmind.com) as part of the [Orderspace](https://www.orderspace.com) integration work
+in our product.
+
+![Bean Mind](beanmind.svg)
