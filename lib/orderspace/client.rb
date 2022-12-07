@@ -41,6 +41,10 @@ module Orderspace
       OrdersEndpoint.new(self)
     end
 
+    def webhooks
+      WebhooksEndpoint.new(self)
+    end
+
     class OauthEndpoint < Orderspace::Endpoint
       include Orderspace::Endpoint::Oauth
     end
@@ -53,6 +57,10 @@ module Orderspace
       include Orderspace::Endpoint::Orders
     end
 
+    class WebhooksEndpoint < Orderspace::Endpoint
+      include Orderspace::Endpoint::Webhooks
+    end
+
     def get(path, options = {})
       execute(:get, path, nil, options.to_h)
     end
@@ -63,6 +71,10 @@ module Orderspace
 
     def put(path, data = nil, options = {})
       execute(:put, path, data, options)
+    end
+
+    def delete(path, data = nil, options = {})
+      execute(:delete, path, data, options)
     end
 
     def execute(method, path, data = nil, options = {})

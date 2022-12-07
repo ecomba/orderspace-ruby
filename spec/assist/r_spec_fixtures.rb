@@ -2,7 +2,7 @@
 
 module RSpecFixtures
   def http_response(*names)
-    join_file('responses.http', *names)
+    join_file('fixtures/responses.http', *names)
   end
 
   def read_http_response_fixture(*names)
@@ -10,7 +10,7 @@ module RSpecFixtures
   end
 
   def struct(*names)
-    join_file('structs', *names)
+    join_file('fixtures/structs', *names)
   end
 
   def read_struct_fixture(*names)

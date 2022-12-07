@@ -1,0 +1,25 @@
+HTTP/1.1 200 OK
+Server: nginx/1.18.0 (Ubuntu)
+Date: Fri, 02 Dec 2022 16:13:52 GMT
+Content-Type: application/json; charset=utf-8
+Connection: keep-alive
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+ETag: W/"a769a42e85d1f6e87df9eba80112da29"
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: 039766f0-9ab3-41d6-80eb-769f880bf395
+X-Runtime: 0.052137
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+{
+  "webhook": {
+    "id": "wh_nq479yz6",
+    "endpoint": "https://webhook.site/6e3931ec-9f4b-4b3a-932f-42f73d1dc45f",
+    "events": ["order.created","dispatch.created"],
+    "signing_key": "7R2gNdE4GU8K06WXPV9lOXBic9mSs5LjKMsk46eW"
+  }
+}

@@ -7,7 +7,11 @@ module Orderspace
         json.each do |key, value|
           method_name = "#{key}="
           if value.is_a? Array
-            build_structs(key, method_name, new_object, value)
+            begin
+              build_structs(key, method_name, new_object, value)
+            rescue
+              new_object.send(method_name.to_sym, value)
+            end
           elsif address?(key)
             new_object.send(method_name.to_sym, Orderspace::Structs.from(value, Orderspace::Structs::Address))
           elsif new_object.respond_to? method_name
@@ -64,7 +68,11 @@ module Orderspace
 
     def self.extract_value_from(struct, member)
       if struct.send(member.to_sym).is_a? Array
-        struct.send(member.to_sym).map { |member| hash_dump(member) }
+        begin
+          struct.send(member.to_sym).map { |member| hash_dump(member) }
+        rescue
+          struct.send(member.to_sym)
+        end
       else
         struct.send(member.to_sym)
       end
@@ -77,3 +85,4 @@ require_relative 'struct/buyer'
 require_relative 'struct/customer'
 require_relative 'struct/oauth_credentials'
 require_relative 'struct/order'
+require_relative 'struct/webhook'
