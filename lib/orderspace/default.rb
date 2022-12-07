@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 module Orderspace
+  ##
+  # Module to compile the default settings
   module Default
 
     # Default Orderspace API endpoint

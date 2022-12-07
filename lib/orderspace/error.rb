@@ -1,12 +1,18 @@
 # frozen_string_literal: true
 
 module Orderspace
+  ##
+  # Basic Error
   class Error < StandardError
   end
 
+  ##
+  # For when a validation fails
   class ValidationFailedError < Error
   end
 
+  ##
+  # Basic Error representing the possible errors that can happen during our communication with the API.
   class RequestError < Error
     attr_reader :response, :message
 
@@ -31,9 +37,13 @@ module Orderspace
     end
   end
 
+  ##
+  # Generic (HTTP Status 400) error
   class BadRequestError < RequestError
   end
 
+  ##
+  # HTTP status 401 Error
   class AuthorizationFailedError < RequestError
 
     private
@@ -43,15 +53,23 @@ module Orderspace
     end
   end
 
+  ##
+  # HTTP status 404 Error
   class NotFoundError < RequestError
   end
 
+  ##
+  # HTTP status 422 Error
   class UnprocessableEntityError < RequestError
   end
 
+  ##
+  # HTTP status 429 error
   class TooManyRequestsError < RequestError
   end
 
+  ##
+  # Generic (HTTP Status 500) Error
   class InternalServerError < RequestError
   end
 end

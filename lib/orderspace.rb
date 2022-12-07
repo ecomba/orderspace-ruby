@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+##
+# This module represents the overarching scope of the gem
+#
 module Orderspace
 end
 

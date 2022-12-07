@@ -3,6 +3,14 @@
 require 'httparty'
 
 module Orderspace
+  ##
+  # This class is the entrypoint to the Orderspace API
+  #
+  # To obtain an access token you will have to have registered a private application
+  # with Orderspace (https://<your_space>.orderspace.com/admin/apps/new).
+  # This will give you the client_id and client_secret you need in order to get your access token.
+  #
+  # client = Client.with(client_key, client_secret)
   class Client
 
     include Default
@@ -11,14 +19,6 @@ module Orderspace
     API_VERSION = 'v1'
 
     attr_reader :access_token
-
-    def self.base_url
-      BASE_URL
-    end
-
-    def self.versioned_url
-      "#{base_url}#{API_VERSION}/"
-    end
 
     def initialize(access_token = nil)
       @access_token = access_token
@@ -29,18 +29,40 @@ module Orderspace
       new(credentials.access_token)
     end
 
+    ##
+    # Represents the base url to Orderspace's API (i.e. https://api.orderspace.com/)
+    # @return [String] the base url to Orderspace's API
+    def self.base_url
+      BASE_URL
+    end
+
+    ##
+    # Represents the URL to the Orderspace API with it's version (i.e. https://api.orderspace.com/v1/)
+    # @return [String] the versioned Orderspace API url
+    def self.versioned_url
+      "#{base_url}#{API_VERSION}/"
+    end
+
+    ##
+    # Returns the oauth endpoint
     def oauth
       OauthEndpoint.new(self)
     end
 
+    ##
+    # Returns the customers endpoint
     def customers
       CustomersEndpoint.new(self)
     end
 
+    ##
+    # Returns the orders endpoint
     def orders
       OrdersEndpoint.new(self)
     end
 
+    ##
+    # Returns the webhooks endpoint
     def webhooks
       WebhooksEndpoint.new(self)
     end
