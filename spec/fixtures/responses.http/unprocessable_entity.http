@@ -1,0 +1,18 @@
+HTTP/1.1 422 Unprocessable Entity
+Server: nginx/1.18.0 (Ubuntu)
+Date: Fri, 02 Dec 2022 16:13:14 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 85
+Connection: keep-alive
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+Cache-Control: no-cache
+X-Request-Id: 525bcd71-1392-4ad3-a249-50c744df1f4b
+X-Runtime: 0.091524
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+{"message":"Validation failed: Payment Terms are invalid, Customer Group is invalid"}

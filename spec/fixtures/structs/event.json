@@ -1,0 +1,116 @@
+[
+  {
+    "event": "order.created",
+    "data": {
+      "order": {
+        "id": "or_l5DYqeDn",
+        "number": 1204,
+        "created": "2020-04-08T15:03:55Z",
+        "status": "new",
+        "customer_id": "cu_gpbOljAn",
+        "company_name": "Sample Customer",
+        "phone": "07911 123456",
+        "email_addresses": {
+          "orders": "sample@orderspace.com",
+          "dispatches": "sample@orderspace.com",
+          "invoices": "sample@orderspace.com"
+        },
+        "delivery_date": "2020-04-09",
+        "reference": "",
+        "internal_note": "",
+        "customer_po_number": "",
+        "customer_note": "",
+        "standing_order_id": "or_68ogydlx",
+        "shipping_type": "Special Delivery",
+        "shipping_address": {
+          "company_name": "Sample Customer",
+          "contact_name": "",
+          "line1": "34 Edgar Buildings",
+          "line2": "George Street",
+          "city": "Bath",
+          "state": "",
+          "postal_code": "BA1 2FJ",
+          "country": "GB"
+        },
+        "billing_address": {
+          "company_name": "Sample Customer",
+          "contact_name": "",
+          "line1": "336 Hargrave Rd",
+          "line2": "Windsor",
+          "city": "New York",
+          "state": "NY",
+          "postal_code": "13865",
+          "country": "US"
+        },
+        "order_lines": [
+          {
+            "id": "ol_NdOLvlpw",
+            "sku": "AM-D-CHR-10",
+            "name": "Amelia Dress",
+            "options": "Colour: Charcoal, Size: 10",
+            "grouping_category": {
+              "id": "ca_9n1klwr5",
+              "name": "Dresses"
+            },
+            "shipping": false,
+            "quantity": 10,
+            "unit_price": 30.0,
+            "sub_total": 300.0,
+            "tax_name": "Standard",
+            "tax_rate": 20.0,
+            "tax_amount": 60.0,
+            "on_hold": false,
+            "invoiced": 0,
+            "paid": 0,
+            "dispatched": 0
+          }
+        ],
+        "currency": "GBP",
+        "net_total": 306.1,
+        "gross_total": 366.1
+      }
+    }
+  },
+  {
+    "event": "customer.created",
+    "data": {
+      "customer": {
+        "id": "cu_dnwz8gnx",
+        "company_name": "Blue Sky",
+        "created_at": "2021-03-09T13:08:51Z",
+        "status": "active",
+        "reference": "",
+        "buyers": [
+          {
+            "name": "Emilia Jane Dogherty",
+            "email_address": "sample@orderspace.com"
+          }
+        ],
+        "phone": "12345",
+        "email_addresses": {
+          "orders": "sample@orderspace.com",
+          "dispatches": "sample@orderspace.com",
+          "invoices": "sample@orderspace.com"
+        },
+        "tax_number": "",
+        "tax_rate_id": null,
+        "addresses": [
+          {
+            "company_name": "Blue Sky",
+            "contact_name": "Emilia Jane Dogherty",
+            "line1": "12 Blue Sky Lane",
+            "line2": "",
+            "city": "Bristol",
+            "postal_code": "BS1 2DF",
+            "state": "",
+            "country": "GB"
+          }
+        ],
+        "minimum_spend": 150.0,
+        "payment_terms_id": "pt_zkmqv8e0",
+        "customer_group_id": "cg_w2n6ln8v",
+        "price_list_id": "pr_3715yj58"
+      }
+    }
+  }
+]
