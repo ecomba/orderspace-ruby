@@ -1,9 +1,0 @@
-HTTP/1.1 400 Bad Request
-Server: nginx/1.18.0 (Ubuntu)
-Date: Fri, 02 Dec 2022 16:11:58 GMT
-Content-Type: text/html; charset=utf-8
-Content-Length: 0
-Connection: keep-alive
-X-Request-Id: b8720ca6-b838-411b-814c-105e74b27e2f
-X-Runtime: 0.014811
-Strict-Transport-Security: max-age=31536000; includeSubDomains

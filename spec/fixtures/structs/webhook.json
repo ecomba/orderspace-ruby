@@ -1,8 +1,0 @@
-{
-  "webhook": {
-    "id":"wh_1q4qn43v",
-    "endpoint":"https://webhook.site/6e3931ec-9f4b-4b3a-932f-42f73d1dc45f",
-    "events":["order.created", "dispatch.created"],
-    "signing_key":"UNxdW7ugYl8PCKjVGkoXkHARkCoFT3eXpdpDsF1s"
-  }
-}
