@@ -1,4 +1,4 @@
-# Bean Mind Orderspace Ruby Client
+# Orderspace Ruby Client
 
 :bomb: **This gem is under development, USE AT YOUR OWN RISK**
 
